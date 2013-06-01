@@ -8,9 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style.css" />
 	<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
-	<script type="text/javascript" src="js/image_slide.js"></script>
-	<script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
-	<script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+	<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/image_slide.js"></script>
+	<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory'); ?>/js/jquery.easing-sooper.js"></script>
+	<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/jquery.sooperfish.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('ul.sf-menu').sooperfish();
