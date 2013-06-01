@@ -7,7 +7,7 @@
 	<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style.css" />
-	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="js/image_slide.js"></script>
 	<script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
 	<script type="text/javascript" src="js/jquery.sooperfish.js"></script>
