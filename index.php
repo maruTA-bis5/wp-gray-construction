@@ -79,6 +79,10 @@
 					<div class="entry-content">
 						<?php the_content( __( 'Read more', 'twenrythirteen' ) ); ?>
 					</div>
+          <div class="entry-meta">
+            <p>Categories: <?php the_category( ' ' ); ?>
+            <?php the_tags( 'Tags: ', ' ', '' ); ?></p>
+          </div>
 				</div><!--close content_item-->
 				<?php endwhile; endif; ?>
 			</div><!--close content-->   
