@@ -24,10 +24,10 @@
 		<div id="dark_container">
 			<div id="banner">
 				<div id="welcome">
-					<h1>Welcome To Grey Construction</h1>
+					<h1><?php bloginfo( 'title' ); ?></h1>
 				</div><!--close welcome-->
 				<div id="welcome_slogan">
-					<h1>Your Company Slogan Here</h1>
+					<h1><?php bloginfo( 'description' ); ?></h1>
 				</div><!--close welcome_slogan-->
 				<div id="slideshow">  
 					<ul class="slideshow">
