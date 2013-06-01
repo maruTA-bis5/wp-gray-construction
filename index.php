@@ -15,6 +15,9 @@
 		$(document).ready(function() {
 			$('ul.sf-menu').sooperfish();
 		});
+		$(document).ready(function() {
+			$('.more-link').parent().addClass('button_small');
+		});
 	</script>
 
 </head>
@@ -54,30 +57,20 @@
 			</div><!--close sidebar_container-->     	 
 
 			<div id="content">
+				<?php if ( have_posts() ) : ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 				<div class="content_item">
-					<h1>Welcome To Your Website</h1> 
-						<p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under the Creative Commons Attribution 3.0 Licence), which means that you are free to download and use it for anything you want (including modifying and amending it). If you would like to remove the &lsquo;website template by ARaynorDesign&rsquo; link from the footer of a template / website then that is OK, providing you make a small donation via the website. I do not specify an amount, just what you think the design is worth.</p>   			  
-
+					<h1><span href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></span></h1> 
+					<?php if ( has_post_thumbnail() ) : ?>
 					<div class="content_image">
-						<img src="images/content_image1.jpg" alt="image1"/>
+						<?php the_post_thumbnail(); ?>
 					</div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>
-					<br style="clear:both"/>
-
-					<div class="content_container">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh nulla, posuere a cursus aliquam, vulputate et lacus. In ultricies eleifend quam, in lacinia quam iaculis eget. Donec fringilla enim quis sem ultrices ullamcorper. Integer at nisl diam, iaculis congue eros. Praesent commodo, odio non fringilla eleifend, augue felis elementum ante, nec consequat dolor urna non augue. Nunc commodo lorem at felis tempor a interdum arcu tempor. Pellentesque blandit lobortis ligula, sit amet condimentum odio aliquam at. Mauris a felis purus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras auctor porta tortor, nec aliquam turpis blandit ut. </p>
-						<div class="button_small">
-							<a href="#">Read more</a>
-						</div><!--close button_small-->
-					</div><!--close content_container-->
-					<div class="content_container">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh nulla, posuere a cursus aliquam, vulputate et lacus. In ultricies eleifend quam, in lacinia quam iaculis eget. Donec fringilla enim quis sem ultrices ullamcorper. Integer at nisl diam, iaculis congue eros. Praesent commodo, odio non fringilla eleifend, augue felis elementum ante, nec consequat dolor urna non augue. Nunc commodo lorem at felis tempor a interdum arcu tempor. Pellentesque blandit lobortis ligula, sit amet condimentum odio aliquam at. Mauris a felis purus. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras auctor porta tortor, nec aliquam turpis blandit ut. </p>          
-						<div class="button_small">
-							<a href="#">Read more</a>
-						</div><!--close button_small-->		  
-					</div><!--close content_container-->			  
+					<?php endif; ?>
+					<div class="entry-content">
+						<?php the_content( __( 'Read more', 'twenrythirteen' ) ); ?>
+					</div>
 				</div><!--close content_item-->
+				<?php endwhile; endif; ?>
 			</div><!--close content-->   
 		</div><!--close site_content-->  
 

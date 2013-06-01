@@ -1,4 +1,11 @@
 <?php
+
+function grayconstruction_setup() {
+	add_theme_support( 'post-thumbnail' );
+	set_post_thumbnail_size( 150, 150 );
+}
+add_action( 'after_setup_theme', 'grayconstruction_setup' );
+
 remove_action( 'widgets_init', 'twentythirteen_widgets_init' );
 function grayconstruction_widgets_init() {
 	register_sidebar( array(
