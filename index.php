@@ -22,6 +22,14 @@
 			$('.content_image img').attr('height', 150);
 		});
 	</script>
+	<style type="text/css">
+		h1.entry-title a {
+    	font: 150% Arial,Helvetica,sans-serif;
+    	text-shadow: 0px -1px 0px rgb(238, 238, 238);
+    	color: rgb(9, 142, 255);
+    	letter-spacing: -1px;
+		}
+	</style>
 </head>
 
 <body>
@@ -62,7 +70,7 @@
 				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<div class="content_item">
-					<h1><span href="<?php the_permalink(); ?>" title="Permalink to <?php the_title(); ?>"><?php the_title(); ?></span></h1> 
+					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="Permalink to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1> 
 					<?php if ( has_post_thumbnail() ) : ?>
 					<div class="content_image">
 						<?php the_post_thumbnail(); ?>
