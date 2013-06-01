@@ -6,6 +6,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<meta name="description" content="<?php bloginfo( 'description' ); ?>" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<?php wp_head(); ?>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_directory' ); ?>/css/style.css" />
 	<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
 	<script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/image_slide.js"></script>
@@ -17,9 +18,10 @@
 		});
 		$(document).ready(function() {
 			$('.more-link').parent().addClass('button_small');
+			$('.content_image img').attr('width', 150);
+			$('.content_image img').attr('height', 150);
 		});
 	</script>
-<?php wp_head(); ?>
 </head>
 
 <body>
