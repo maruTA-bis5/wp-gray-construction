@@ -40,31 +40,10 @@
 
 		<div id="menu_container">
 			<div id="menubar">
-				<ul class="sf-menu" id="nav">
-					<li class="selected"><a href="index.html">Home</a></li>
-					<li><a href="ourwork.html">Our Work</a>
-						<ul>
-							<li><a href="#">Drop Down 1</a></li>
-							<li><a href="#">Drop Down 2</a></li>
-							<li><a href="#">Drop Down 3</a></li>
-						</ul>
-					</li>			
-					<li><a href="testimonials.html">Testimonials</a>
-						<ul>
-							<li><a href="#">Drop Down 1</a></li>
-							<li><a href="#">Drop Down 2</a></li>
-							<li><a href="#">Drop Down 3</a>
-								<ul>
-									<li><a href="#">More Drop Down 1</a></li>
-									<li><a href="#">More Drop Down 2</a></li>
-									<li><a href="#">More Drop Down 3</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>			
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="contact.html">Contact Us</a></li>
-				</ul>
+				<?php wp_nav_menu( array( 
+					'menu_class' => 'sf-menu',
+					'menu_id' => 'nav',
+					) ); ?>
 			</div><!--close menubar-->	
 		</div><!--close menu_container-->	
 
