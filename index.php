@@ -19,7 +19,7 @@
 			$('.more-link').parent().addClass('button_small');
 		});
 	</script>
-
+<?php wp_head(); ?>
 </head>
 
 <body>
@@ -81,6 +81,6 @@
 			<a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="http://fotogrph.com/">Images</a> | design by <a href="http://www.araynordesign.co.uk">ARaynorDesign</a> | WordPress theme by <a href="http://blog.bis5.net/">bis5@4S Technology</a>
 		</div><!--close footer-->  
 	</div><!--close footer_container-->  
-
+<?php wp_footer(); ?>
 </body>
 </html>
