@@ -81,7 +81,9 @@
 					</div>
           <div class="entry-meta">
             <p>Categories: <?php the_category( ' ' ); ?>
-            <?php the_tags( 'Tags: ', ' ', '' ); ?></p>
+            <?php the_tags( 'Tags: ', ' ', '' ); ?>
+      			Post on: <?php grayconstruction_entry_date(); ?>       
+            </p>
           </div>
 				</div><!--close content_item-->
 				<?php endwhile; endif; ?>

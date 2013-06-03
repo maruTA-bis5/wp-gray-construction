@@ -19,3 +19,16 @@ function grayconstruction_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'grayconstruction_widgets_init' );
+
+function grayconstruction_entry_date( $echo = true ) {
+  $date = sprintf( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark">%3$s</a></span>',
+    esc_url( get_permalink() ),
+    esc_attr( sprintf( 'Permalink to %s', the_title_attribute( 'echo=0' ) ) ),
+    esc_html( sprintf( '%1$s', get_the_date() ) )
+	);
+
+	if ( $echo )
+		echo $date;
+
+	return $date;
+}
